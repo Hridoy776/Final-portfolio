@@ -12,36 +12,37 @@ export const Contact = () => {
             }, (error) => {
                 console.log(error.text);
             });
+        e.current.reset()
     };
 
     return (
         <form className='w-[75%] mx-auto' ref={form} onSubmit={sendEmail}>
-            <div class="form-control">
-                <label class="label">
-                    <span class="label-text">Name</span>
+            <div className="form-control">
+                <label className="label">
+                    <span className="label-text">Name</span>
                 </label>
-                <input type="name" placeholder="name" name='user_name'class="input input-bordered" />
+                <input type="name" placeholder="name" name='user_name' className="input input-bordered" />
             </div>
-            <div class="form-control">
-                <label class="label">
-                    <span class="label-text">Email</span>
+            <div className="form-control">
+                <label className="label">
+                    <span className="label-text">Email</span>
                 </label>
-                <input type="text" name='user_email' placeholder="password" class="input input-bordered" />
-               
+                <input type="text" name='user_email' placeholder="password" className="input input-bordered" />
+
             </div>
-            <div class="form-control">
-                <label class="label">
-                    <span class="label-text">Email</span>
+            <div className="form-control">
+                <label className="label">
+                    <span className="label-text">Email</span>
                 </label>
-                <textarea type="text" name='message' placeholder="password" class="input input-bordered" />
-               
+                <textarea type="text" name='message' placeholder="password" className="input input-bordered" />
+
             </div>
-            <div class="form-control mt-6">
+            <div className="form-control mt-6">
                 <input className='btn btn-primary' type="submit" value="send" />
             </div>
         </form>
-      
+
     );
-  };
+};
 
 export default Contact;

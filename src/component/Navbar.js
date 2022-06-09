@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
+
 import { MenuIcon, XIcon } from '@heroicons/react/solid'
 import './Navbar.css'
+import { NavLink } from 'react-router-dom';
 const Navbar = () => {
 
     const [navbarOpen, setNavbarOpen] = useState(false)
@@ -29,12 +31,12 @@ const Navbar = () => {
             <nav className="fixed shadow-md z-50 top-0 w-full flex flex-wrap items-center justify-between px-2 py-3 bg-[#6E59BC]   mb-3">
                 <div className="container lg:px-32 px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-                        <Link
+                        <NavLink
                             className={colorChange ? "text-2xl font-medium leading-relaxed inline-block mr-4 py-2 whitespace-nowrap text-[#b504b5] uppercase title " : "text-2xl font-medium leading-relaxed inline-block mr-4 py-2 whitespace-nowrap text-white uppercase title "}
                             to="/"
                         >
-                            pristine perfumes
-                        </Link>
+                            REDOY
+                        </NavLink>
                         <button
                             className=" cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
                             type="button"
@@ -59,23 +61,16 @@ const Navbar = () => {
                                 <NavLink style={navLinkStyles} className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug  hover:opacity-75  " to="/home">home</NavLink>
                             </li>
                             <li>
-                                <NavLink style={navLinkStyles} className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug  hover:opacity-75  " to="/home">home</NavLink>
+                                <Link  className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug  hover:opacity-75  " to='home#project'>project</Link>
                             </li>
-                            <li>
-                                <NavLink style={navLinkStyles} className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug  hover:opacity-75  " to="/home">home</NavLink>
-                            </li>
-                            <li>
-                                <NavLink style={navLinkStyles} className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug  hover:opacity-75  " to="/home">home</NavLink>
-                            </li>
+                            
 
 
 
 
 
 
-                            <li>
-                                <NavLink style={navLinkStyles} className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug  hover:opacity-75" to="/blog">blogs</NavLink>
-                            </li>
+                            
 
 
                         </ul>
