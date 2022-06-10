@@ -1,0 +1,40 @@
+[
+    {
+        "id":1,
+        "img":[
+            "https://i.ibb.co/zb13RB1/drill-destructor.png",
+            "https://i.ibb.co/sQJ249V/Screenshot-1.png",
+            "https://i.ibb.co/yNcLCbD/Screenshot-2.png"
+        ],
+        "name":"Drill Destructor",
+        "glink1":"https://github.com/Hridoy776/manufacturer-website-client-side",
+        "glink2":"https://github.com/Hridoy776/manufacturer-website-server-side",
+        "live":"https://drill-destructor.web.app/",
+        "description":""
+    },
+    {
+        "id":2,
+        "img":[
+            "https://i.ibb.co/c1FS4dW/Screenshot-4.png",
+            "https://i.ibb.co/WKZG8Qc/Screenshot-5.png",
+            "https://i.ibb.co/2dfs7gr/Screenshot-6.png"
+        ],
+        "name":"Pristine Perfumes",
+        "glink1":"https://github.com/Hridoy776/warehouse-management-client-side",
+        "glink2":"https://github.com/Hridoy776/warehouse-management-server-side",
+        "live":"https://pristine-perfumes.web.app/",
+        "description":""
+    },
+    {
+        "id":3,
+        "img":[
+            "https://i.ibb.co/gR488B9/tech-world.png",
+            "https://i.ibb.co/GsPZs5d/Screenshot-8.png",
+            "https://i.ibb.co/R3dBhd9/Screenshot-7.png"
+        ],
+        "name":"Drill Destructor",
+        "glink1":"https://github.com/Hridoy776/product-analysis-website",
+        "live":"https://dreamy-kitten-b446cc.netlify.app/",
+        "description":""
+    }
+]

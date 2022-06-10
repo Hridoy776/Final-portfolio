@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { InboxInIcon } from '@heroicons/react/solid';
 export const Contact = () => {
     const form = useRef();
 
@@ -16,31 +17,36 @@ export const Contact = () => {
     };
 
     return (
-        <form className='w-[75%] mx-auto' ref={form} onSubmit={sendEmail}>
-            <div className="form-control">
-                <label className="label">
-                    <span className="label-text">Name</span>
-                </label>
-                <input type="name" placeholder="name" name='user_name' className="input input-bordered" />
-            </div>
-            <div className="form-control">
-                <label className="label">
-                    <span className="label-text">Email</span>
-                </label>
-                <input type="text" name='user_email' placeholder="password" className="input input-bordered" />
+        <div>
+            <InboxInIcon className='w-16 mx-auto text-secondary'/>
+            <div>
+                <form className='w-[75%] mx-auto' ref={form} onSubmit={sendEmail}>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Name</span>
+                        </label>
+                        <input type="name" placeholder="name" name='user_name' className="input input-bordered " />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Email</span>
+                        </label>
+                        <input type="text" name='user_email' placeholder="password" className="input input-bordered" />
 
-            </div>
-            <div className="form-control">
-                <label className="label">
-                    <span className="label-text">Email</span>
-                </label>
-                <textarea type="text" name='message' placeholder="password" className="input input-bordered" />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Email</span>
+                        </label>
+                        <textarea type="text" name='message' placeholder="password" className="input input-bordered" />
 
+                    </div>
+                    <div className="form-control mt-6">
+                        <input className='btn btn-primary' type="submit" value="send" />
+                    </div>
+                </form>
             </div>
-            <div className="form-control mt-6">
-                <input className='btn btn-primary' type="submit" value="send" />
-            </div>
-        </form>
+        </div>
 
     );
 };
