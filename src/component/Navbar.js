@@ -58,10 +58,10 @@ const Navbar = () => {
                         <ul className="flex flex-col lg:flex-row list-none lg:ml-auto ">
 
                             <li>
-                                <NavLink style={navLinkStyles} className="px-3 py-2 flex items-center text-3xl uppercase  leading-snug  hover:opacity-75  " to="/home">home</NavLink>
+                                <NavLink style={navLinkStyles} className="px-3 py-2 flex items-center text-xl uppercase  leading-snug  hover:opacity-75  " to="/">home</NavLink>
                             </li>
                             <li>
-                                <Link  className="px-3 py-2 flex items-center text-3xl uppercase  leading-snug  hover:opacity-75  " to='home#project'>project</Link>
+                                <Link  className="px-3 py-2 flex items-center text-xl uppercase  leading-snug  hover:opacity-75  " to='home#project'>project</Link>
                             </li>
                             
 
