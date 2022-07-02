@@ -10,7 +10,8 @@
         "glink1":"https://github.com/Hridoy776/manufacturer-website-client-side",
         "glink2":"https://github.com/Hridoy776/manufacturer-website-server-side",
         "live":"https://drill-destructor.web.app/",
-        "description":""
+        "description":"User friendly , light-weght drill machine manufacturer website.Users can add, cancel orders and pay orders.Admin can make others as admin, see all user orders, and manage all user orders.",
+        "technology":"react,firebase,tailwind,daisy UI,firebase,react-query,stripe,react-hook-from, node, MongoDB, express."
     },
     {
         "id":2,
@@ -23,7 +24,8 @@
         "glink1":"https://github.com/Hridoy776/warehouse-management-client-side",
         "glink2":"https://github.com/Hridoy776/warehouse-management-server-side",
         "live":"https://pristine-perfumes.web.app/",
-        "description":""
+        "description":"User-friendly single page perfumes warehouse management Website Users can deliver and restock products. Users can sign in with google or create an account to log in with a password and email.",
+        "technology":"react,tailwind,daisyui,firebase,axios,node, mongodb,Express."
     },
     {
         "id":3,
@@ -35,6 +37,7 @@
         "name":"Tech World",
         "glink1":"https://github.com/Hridoy776/product-analysis-website",
         "live":"https://dreamy-kitten-b446cc.netlify.app/",
-        "description":""
+        "description":"Users can give reviews with star ratings Beautiful user interface with bootstrap Yearly profit and revenue in the dashboard",
+        "technology":"react, react-router, firebase, rechart."
     }
 ]

@@ -22,15 +22,16 @@ const ProjectDetails = () => {
     console.log(l)
 
     return (
-        <div className='min-h-screen my-auto flex flex-col items-center justify-center'>
-            <div className='grid grid-cols-3 gap-8 bg-base-200'>
-                <img className='w-[250px]' src={l.img[0]} alt="" />
-                <img className='w-[250px]' src={l.img[1]} alt="" />
-                <img className='w-[250px]' src={l.img[2]} alt="" />
+        <div className='min-h-screen mx-auto w-[90%] lg:w-[800px] h-[700px] mt-36 lg:flex  items-center justify-center'>
+            <div className='grid grid-cols-1 justify-center items-center lg:w-1/2  gap-8 bg-base-200 mx-auto'>
+                <img className='w-[250px] mx-auto' src={l.img[0]} alt="" />
+                <img className='w-[250px] mx-auto' src={l.img[1]} alt="" />
+                <img className='w-[250px] mx-auto' src={l.img[2]} alt="" />
             </div>
-            <div>
-                <h2>{l.name}</h2>
-                <p></p>
+            <div className='max-w-lg border border-primary lg:w-1/2 p-5'>
+                <h2 className='text-3xl lg:text-5xl mt-10'>{l.name}</h2>
+                <p className=' text-xl lg:text-2xl'>{l.description}</p>
+                <p className=' text-xl lg:text-2xl'><span className='text-primary font-bold'>technology used</span> :{l.technology}</p>
             </div>
         </div>
     );

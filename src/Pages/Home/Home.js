@@ -12,7 +12,7 @@ const Home = () => {
         <div className='min-h-screen'>
             <Banner />
 
-            <section id='project'>
+            <section id='about' className='mt-16'>
                 <div className='flex justify-center mx-auto items-center my-10'>
                     <div className='border-t-4 border-primary mt-2 w-1/4'></div>
                     <div className='text-6xl mx-4  lg:mx-16'>About</div>
@@ -22,7 +22,7 @@ const Home = () => {
                     <About />
                 </section>
             </section>
-            <section id='project'>
+            <section className='mt-16' id='skill'>
                 <div className='flex justify-center mx-auto items-center my-10'>
                     <div className='border-t-4 border-primary mt-2 w-1/4'></div>
                     <div className='text-6xl mx-4  lg:mx-16'>Skill</div>
@@ -32,7 +32,7 @@ const Home = () => {
                     <Skill />
                 </section>
             </section>
-            <section id='project'>
+            <section className='mt-16' id='project'>
                 <div className='flex justify-center mx-auto items-center my-10'>
                     <div className='border-t-4 border-primary mt-2 w-1/4'></div>
                     <div className='text-6xl mx-4  lg:mx-16'>Projects</div>
@@ -41,7 +41,7 @@ const Home = () => {
                 <section >
                     <Projects />
                 </section>
-                <section id="contact">
+                <section className='my-16' id="contact">
                     <Contact />
                 </section>
             </section>

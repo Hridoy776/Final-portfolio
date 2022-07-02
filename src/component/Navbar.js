@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-
+import { Sling as Hamburger } from 'hamburger-react';
 import { MenuIcon, XIcon } from '@heroicons/react/solid'
 import './Navbar.css'
 import { NavLink } from 'react-router-dom';
@@ -32,7 +32,7 @@ const Navbar = () => {
                 <div className="container lg:px-32 px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                         <NavLink
-                            className={colorChange ? "text-2xl font-medium leading-relaxed inline-block mr-4 py-2 whitespace-nowrap text-[#b504b5] uppercase title " : "text-2xl font-medium leading-relaxed inline-block mr-4 py-2 whitespace-nowrap text-white uppercase title "}
+                            className={colorChange ? "text-2xl font-medium leading-relaxed inline-block mr-4 py-2 whitespace-nowrap text-secondary uppercase title " : "text-2xl font-medium leading-relaxed inline-block mr-4 py-2 whitespace-nowrap text-white uppercase title "}
                             to="/"
                         >
                             REDOY
@@ -43,14 +43,14 @@ const Navbar = () => {
                             onClick={() => setNavbarOpen(!navbarOpen)}
                         >
                             {
-                                !navbarOpen ? <MenuIcon className="h-5 w-5  text-white transition duration-500" /> : <XIcon className="h-5 w-5 transition  text-white duration-500"/>
+                                <Hamburger easing="ease-in" color='white' duration={0.8} />
                             }
-                            
+
                         </button>
                     </div>
                     <div
                         className={
-                            "lg:flex flex-grow items-center" +
+                            "lg:flex flex-grow  ease-in items-center" +
                             (navbarOpen ? " flex" : " hidden")
                         }
                         id="example-navbar-danger"
@@ -61,16 +61,25 @@ const Navbar = () => {
                                 <NavLink style={navLinkStyles} className="px-3 py-2 flex items-center text-xl uppercase  leading-snug  hover:opacity-75  " to="/">home</NavLink>
                             </li>
                             <li>
-                                <Link  className="px-3 py-2 flex items-center text-xl uppercase  leading-snug  hover:opacity-75  " to='home#project'>project</Link>
+                                <Link className="px-3 py-2 flex items-center text-xl uppercase  leading-snug  hover:opacity-75 text-white  " to='home#project'>project</Link>
                             </li>
-                            
+                            <li>
+                                <Link className="px-3 py-2 flex items-center text-xl uppercase text-white  leading-snug  hover:opacity-75  " to='home#about'>about</Link>
+                            </li>
+                            <li>
+                                <Link className="px-3 py-2 flex items-center text-xl uppercase text-white leading-snug  hover:opacity-75  " to='home#skill'>skill</Link>
+                            </li>
+                            <li>
+                                <NavLink style={navLinkStyles} className="px-3 py-2 flex items-center text-xl uppercase text-white leading-snug  hover:opacity-75  " to='/blog'>blog</NavLink>
+                            </li>
 
 
 
 
 
 
-                            
+
+
 
 
                         </ul>
