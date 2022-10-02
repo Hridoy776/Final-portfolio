@@ -1,8 +1,9 @@
 [
     {
         "id":1,
+        "catagory":"menufacturing website",
         "img":[
-            "https://i.ibb.co/zb13RB1/drill-destructor.png",
+            "https://i.ibb.co/Vp0hv0f/drill-destructor.png",
             "https://i.ibb.co/sQJ249V/Screenshot-1.png",
             "https://i.ibb.co/yNcLCbD/Screenshot-2.png"
         ],
@@ -15,8 +16,9 @@
     },
     {
         "id":2,
+        "catagory":"warehouse website",
         "img":[
-            "https://i.ibb.co/c1FS4dW/Screenshot-4.png",
+            "https://i.ibb.co/GdTx6bN/pristine-perfumes1.png",
             "https://i.ibb.co/WKZG8Qc/Screenshot-5.png",
             "https://i.ibb.co/2dfs7gr/Screenshot-6.png"
         ],
@@ -29,9 +31,10 @@
     },
     {
         "id":3,
+        "catagory":"technology website",
         "img":[
             "https://i.ibb.co/gR488B9/tech-world.png",
-            "https://i.ibb.co/GsPZs5d/Screenshot-8.png",
+            "https://i.ibb.co/nsJ7mhk/tech-world.png",
             "https://i.ibb.co/R3dBhd9/Screenshot-7.png"
         ],
         "name":"Tech World",

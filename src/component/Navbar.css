@@ -3,3 +3,15 @@
 .title{
     font-family: 'Dancing Script', cursive;
 } */
+
+.card-nav {
+	/* other styles */
+	background: rgba(255, 255, 255, .7);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+
+.selected{
+	color: red;
+	font-weight: 700;
+}

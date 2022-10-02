@@ -1,35 +1,78 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import useProject from '../../Hook/useProject';
 const Projects = () => {
-    const[project]=useProject()
-    const navigate=useNavigate()
-    const handleDetail=(id)=>{
+
+    const [projects] = useProject()
+    const [onHover, setOnHover] = useState(-1)
+    const navigate = useNavigate()
+
+    const handleDetails = (id) => {
         navigate(`/details/${id}`)
     }
+    const hideButton = (index) => {
+        return ` grid grid-cols-4 gap-8 ${onHover === index ? " " : 'hidden'}   `
+    }
+
     return (
-        <div className='grid lg:grid-cols-3 gap-4 w-[80%] mx-auto my-10'>
+        <div
+
+            className=' w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 justify-center items-center'>
+
             {
-                project.map(s=><div className=" card-compact max-w-lg bg-[#9E7777] shadow-xl">
-                <figure><img src={s.img[0]} className="w-[100%] h-[200px]" alt="Shoes" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">{s.name}</h2>
-                    <div className='grid grid-cols-2 lg:grid-cols-3 gap-2'>
-                    <a className='btn w-fit btn-outline btn-secondary btn-sm' href={s.glink1}>client-side</a>
-                    {
-                        s.glink2 && <a className='btn w-fit btn-outline btn-secondary btn-sm' href={s.glink2}>server-side</a>
-                    }
-                    <a className='btn w-fit btn-outline btn-secondary btn-sm' href={s.live}>live</a>
-                    </div>
-                    <div className="card-actions justify-start">
-                        <button onClick={()=>handleDetail(s.id)} className="btn btn-primary">Details</button>
-                    </div>
-                </div>
-            </div>)
+                projects.map(project => {
+                    return (
+                        <div>
+                            <div
+                                onClick={() => handleDetails(project._id)}
+                                onMouseEnter={() => setOnHover(project._id)}
+                                onMouseLeave={() => setOnHover(-1)}
+                                className='shadow-lg flex items-end p-3  ' key={project._id} style={{ backgroundImage: `url(${project.img[0]})`, width: '350px', height: "350px" }}>
+                                <div className={hideButton(project._id)} >
+                                    <p
+
+                                    >
+
+                                        <button
+                                            onClick={() => handleDetails(project._id)}
+                                            className='btn bg-secondary    rounded-none    '>Details</button>
+                                    </p>
+                                    <p
+
+                                    >
+
+                                        <a href={project.glink1}
+                                            className='btn bg-secondary    rounded-none    '>client</a>
+                                    </p>
+                                    <p
+
+                                    >
+
+                                        <a href={project.glink2}
+                                            className='btn bg-secondary    rounded-none    '>server</a>
+                                    </p>
+                                    <p
+
+                                    >
+
+                                        <a href={project.live}
+                                            className='btn bg-secondary    rounded-none    '>Live</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                            <p className='text-xl capitalize mt-4 font-bold text-accent'>{project.name}</p>
+                        </div>
+
+
+
+                    )
+                })
             }
-            
+
         </div>
     );
 };
 
 export default Projects;
+
